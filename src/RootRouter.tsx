@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react';
 import {Routes, Route } from 'react-router-dom';
+import WithBackLink from './HOC/WithBackLink';
 import Back from './pages/Back';
 import Front from './pages/Front';
 import Main from './pages/Main';
@@ -20,15 +21,15 @@ const RootRouter = () => {
     },
     {
       path: '/front',
-      element: <Front />,
+      element: WithBackLink(<Front />),
     },
     {
       path: '/back',
-      element: <Back />,
+      element: WithBackLink(<Back />),
     },
     {
       path: '/test',
-      element: <Test />,
+      element: WithBackLink(<Test />),
     },
     {
       path: '*',
