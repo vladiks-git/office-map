@@ -1,0 +1,7 @@
+.hov{
+  transition: all 0.2s linear;
+}
+.hov:hover{
+  transform: scale(1.4);
+  cursor: pointer;
+}
